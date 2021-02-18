@@ -23,7 +23,7 @@ def main() -> None:
         frame = _get_image_frame(camera)
         hsv_img = _convert_frame_to_hsv(frame)
 
-        if np.average(norm(hsv_img, axis=2)) / np.sqrt(3) > 100:
+        if np.average(norm(hsv_img, axis=2)) / np.sqrt(3) > 110:
             _post_to_michi()
             break
 
